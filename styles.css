@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #031b38;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.sliders-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-box {
+  width: 100%;
+}
+
+.slider-box-title {
+  width: 100%;
+  padding: 1rem;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.rotate-image {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.new-slide-title {
+  position: absolute;
+  font-size: 4rem;
+  font-weight: 200;
+  color: white;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  margin: 0;
+  opacity: 0;
+}
+
+/* SLIDER STYLES */
+.slider-container {
+  max-width: 100vw;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+}
+
+.slide {
+  margin: 0.3rem;
+  overflow: hidden;
+  height: 80vh;
+  border-radius: 0.5rem;
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  transition: all 500ms ease-out;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.slide-title {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: 100;
+  bottom: 1rem;
+  left: 1rem;
+  margin: 0;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  transition-delay: 0.4s;
+}
